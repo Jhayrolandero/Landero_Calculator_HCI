@@ -1,0 +1,121 @@
+body {
+  background-color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#calcu {
+  width: 320px;
+  aspect-ratio: 9/16;
+  background-color: #243342;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+
+#screen {
+  height: 25%;
+  max-height: 140px;
+  background-color: #243342;
+}
+
+#container {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#inputs {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.btn {
+  text-align: center;
+  background-color: #243342;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  color: gainsboro;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: bold;
+  box-shadow: 0px 7px 7px -1px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: 0px 7px 7px -1px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 7px 7px -1px rgba(0, 0, 0, 0.45);
+}
+
+.btn:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 5px;
+  flex: 1;
+}
+
+.operator {
+  color: #ec802e;
+}
+
+#equal {
+  /* grid-column: span 2; */
+  background-color: #ec802e;
+  color: #ffffff;
+}
+
+#screen {
+  color: #ec802e;
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+}
+
+#display {
+  font-size: 2.5rem;
+  height: 50%;
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: end;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: auto;
+  text-wrap: nowrap;
+}
+
+#result {
+  font-size: 1.5rem;
+  height: 50%;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #48464b #243342;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #243342;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #48464b;
+  border-radius: 16px;
+  border: 8px solid #ffffff;
+}
